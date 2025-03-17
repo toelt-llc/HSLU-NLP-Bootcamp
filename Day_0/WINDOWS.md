@@ -98,7 +98,7 @@ For many computers, this is already the case. Let's check:
 - Click on the `Performance` tab
 - Click on `CPU`
 
-![Windows task manager](/images/windows_task_manager.png)
+<img src="./images/windows_task_manager.png"  width="320" height="300">
 
 :heavy_check_mark: If you see "Virtualization: Enabled", you're good to go :+1:
 
@@ -155,6 +155,8 @@ A blue terminal window will appear:
 wsl --install
 ```
 
+<img src="./images/wsl_install_success.png"  width="320" height="300">
+
 :heavy_check_mark: If the command ran without any error, please restart your computer and continue below :+1:
 
 :x: If you encounter an error message (or if you see some text in red in the window), please **contact a teacher**
@@ -207,7 +209,7 @@ Once your computer has restarted, we need to download the WSL2 installer.
 - Click `Next`
 - Click `Finish`
 
-![Update WSL from version 1 to 2](/images/windows_update_wsl.png)
+<img src="./images/windows_update_wsl.png"  width="300" height="260">
 
 :heavy_check_mark: If didn't encounter any error message, you're good to go :+1:
 
@@ -270,6 +272,10 @@ If you are running Windows 10, let's install Ubuntu throught the Microsoft Store
 - **Select version without any number, just plain "Ubuntu"**
 - Click on `Get`
 
+<img src="./images/ubuntu_install_process.png"  width="320" height="300">
+
+<img src="./images/ubuntu_install_success.png"  width="320" height="300">
+
 :warning: Don't install **Ubuntu 18.04 LTS** nor **Ubuntu 20.04**!
 
 <details>
@@ -300,6 +306,8 @@ At first launch, you will be asked some information:
 - Confirm your password
 
 :warning: When you type your password, nothing will show up on the screen, **that's normal**. This is a security feature to mask not only your password as a whole but also its length. Just type your password and when you're done, press `Enter`.
+
+<img src="./images/ubuntu_name.png"  width="320" height="300">
 
 You can close the Ubuntu window now that it is installed on your computer.
 
@@ -406,7 +414,7 @@ Let's install [Visual Studio Code](https://code.visualstudio.com) text editor.
 - Open the file you have just downloaded.
 - Install it with few options:
 
-![VS Code installation options](images/windows_vscode_installation.png)
+<img src="./images/windows_vscode_installation.png"  width="300" height="260">
 
 When the installation is finished, launch VS Code.
 
@@ -430,7 +438,7 @@ code .
 
 :heavy_check_mark: If you see `WSL: Ubuntu` in the bottom left corner of the VS Code window, you're good to go :+1:
 
-![WSL Ubuntu Remote](images/windows_remote_wsl.png)
+<img src="./images/windows_remote_wsl.png"  width="300" height="260">
 
 :x: Otherwise, please **contact a teacher**
 
@@ -476,17 +484,20 @@ Press `Ctrl` + `,`
 
 It should open the terminal settings:
 
-![Windows Terminal Settings](/images/windows_terminal_settings.png)
+<img src="./images/windows_terminal_settings.png"  width="460" height="260">
 
 - Change the default profile to "Ubuntu"
 - Click on "Save"
 - Click on "Open JSON file"
 
+<img src="./images/ubuntu_terminal_default.png"  width="320" height="300">
+
 You may see an orange circle rather than a penguin as the logo for Ubuntu.
 
 We have circled in red the part you will need to change:
 
-![Windows Terminal JSON settings file](/images/windows_terminal_settings_json.png)
+
+<img src="./images/windows_terminal_settings_json.png"  width="320" height="260">
 
 First, let's ask Ubuntu to start directly inside your Ubuntu Home Directory instead of the Windows one:
 
@@ -552,7 +563,7 @@ Launch VS Code from your terminal by typing `code` and pressing `Enter`.
 
 Click on the little arrow at the bottom of the left bar :point_down:
 
-![VS Code Live Share](/images/vscode_live_share.png)
+<img src="./images/vscode_live_share.png"  width="320" height="260">
 
 - Click on the "Share" button, then on "GitHub (Sign in using GitHub account)".
 - A popup appears asking you to sign in with GitHub: click on "Allow".
@@ -633,7 +644,8 @@ If asked "Do you want to change your default shell to zsh?", press `Y`
 
 At the end your terminal should look like this:
 
-![Ubuntu terminal with OhMyZsh](/images/oh_my_zsh.png)
+
+<img src="./images/oh_my_zsh.png"  width="360" height="260">
 
 :heavy_check_mark: If it does, you can continue :+1:
 
@@ -708,15 +720,13 @@ glab config set -g host gitlab.switch.ch
 
 Now it's time to generate a Personal Access Token (PAT) in order to login to your account. Open the [course repository](https://gitlab.switch.ch/hslu/continuing-education/bootcamp-NLP-LLM/bootcamp_fs2025) and navigate to "Preferences" by clicking your profile in the top left corner.
 
-![GitLab Preferences](images/gitlab-preferences.png)
-
 Then click on "Access tokens" and add a new token.
 
-![GitLab Access tokens](images/gitlab-personal-access-tokens.png)
+<img src="./images/gitlab-personal-access-tokens.png"  width="360" height="160">
 
 You can name the token however you want, just be sure to not set an expiration date and to select the options circled in red:
 
-![Creating a Personal Access Token](images/gitlab-create-personal-access-token.png)
+<img src="./images/gitlab-create-personal-access-token.png"  width="360" height="300">
 
 Finally, click on "Create personal access token" and copy the token.
 
@@ -760,7 +770,7 @@ We'll start with a default configuration provided in the course materials.
 Go to the `dotfiles` folder and run the installer:
 
 ```bash
-cd dotfiles && bash install.sh
+cd bootcamp_fs2025/Day_0/dotfiles && bash install.sh
 ```
 
 Please now **quit** all your opened terminal windows.
@@ -1045,7 +1055,7 @@ pip install --upgrade pip
 Then let's install some packages for the first weeks of the course. To do so, navigate to the cloned course material folder and run the following command:
 
 ```bash
-pip install -r requirements/linux.txt
+pip install -r requirements_new/linux.txt
 ```
 
 ## Configuring Jupyter Notebook to open in your browser
@@ -1076,6 +1086,8 @@ And replace it with this one **precisely** 👇 (including removing the `#` symb
 c.ServerApp.use_redirect_file = False
 ```
 
+<img src="./images/jupyter_config.png"  width="320" height="300">
+
 Let's try to run Jupyter:
 
 ```bash
@@ -1084,24 +1096,11 @@ jupyter notebook
 
 This command should have opened a Jupyter page in your browser:
 
-![Jupyter page](/images/wsl_jupyter_notebook.png)
+<img src="./images/wsl_jupyter_notebook.png"  width="330" height="300">
 
 If it is not the case, please call a teacher.
 
 To stop the Jupyter server in the terminal, press `Ctrl` + `C`, enter y, then press Enter.
-
-## `jupyter` notebook extensions
-
-Pimp your `jupyter` notebooks with awesome extensions:
-
-```bash
-# install nbextensions
-jupyter contrib nbextension install --user
-jupyter nbextension enable toc2/main
-jupyter nbextension enable collapsible_headings/main
-jupyter nbextension enable spellchecker/main
-jupyter nbextension enable code_prettify/code_prettify
-```
 
 ### Custom CSS
 
@@ -1146,27 +1145,15 @@ jupyter notebook
 
 Your web browser should open on a `jupyter` window:
 
-![jupyter.png](images/jupyter.png)
+<img src="./images/jupyter.png"  width="300" height="120">
 
 Click on `New`:
 
-![jupyter_new.png](images/jupyter_new.png)
+<img src="./images/jupyter_new.png"  width="300" height="120">
 
 A tab should open on a new notebook:
 
-![jupyter_notebook.png](images/jupyter_notebook.png)
-
-### `nbextensions` check up
-
-Perform a sanity check for `jupyter notebooks nbextensions`. Click on `Nbextensions`:
-
-![jupyter_nbextensions.png](images/jupyter_nbextensions.png)
-
-Untick _"disable configuration for nbextensions without explicit compatibility"_ then check that _at least_ all `nbextensions` circled in red are enabled:
-
-![nbextensions.png](images/nbextensions.png)
-
-You can close your web browser then terminate the jupyter server with `CTRL` + `C`.
+<img src="./images/jupyter_notebook.png"  width="400" height="60">
 
 ### Python setup check up
 
@@ -1204,7 +1191,7 @@ In order to do that, let's create shortcuts to Ubuntu directories in the Windows
 - Dive into the Ubuntu file system in order to look for directories of interest
 - Drag the desired folders into the Address Bar in order to create shortcuts
 
-![How to add a shortcut to Ubuntu file system on Windows](/images/windows_ubuntu_file_system_shortcut.gif)
+![How to add a shortcut to Ubuntu file system on Windows](./images/windows_ubuntu_file_system_shortcut.gif)
 
 ### Open the Windows File Explorer from the Ubuntu terminal
 
@@ -1232,7 +1219,7 @@ You are going to use most of the apps you've installed today really often. Let's
 
 To pin an app to your taskbar, launch the app, right-click on the icon in the taskbar to bring up the context menu and choose "Pin to taskbar".
 
-![How to pin an app to the taskbar in Windows](/images/windows_taskbar.png)
+<img src="./images/windows_taskbar.png"  width="300" height="150">
 
 You must pin:
 
@@ -1273,7 +1260,7 @@ docker run hello-world
 
 The following message should print:
 
-![docker_hello.png](images/docker_hello.png)
+<img src="./images/docker_hello.png"  width="300" height="260">
 
 <details>
   <summary markdown='span'>Permission denied?</summary>

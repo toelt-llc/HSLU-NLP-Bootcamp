@@ -95,7 +95,7 @@ Launch VS Code from your terminal by typing `code` and pressing `Enter`.
 
 Click on the little arrow at the bottom of the left bar :point_down:
 
-![VS Code Live Share](images/vscode_live_share.png)
+<img src="./images/vscode_live_share.png" width=600>
 
 - Click on the "Share" button, then on "GitHub (Sign in using GitHub account)".
 - A popup appears asking you to sign in with GitHub: click on "Allow".
@@ -186,7 +186,7 @@ If asked "Do you want to change your default shell to zsh?", press `Y`
 
 At the end your terminal should look like this:
 
-![Ubuntu terminal with OhMyZsh](images/oh_my_zsh.png)
+<img src="./images/oh_my_zsh.png" width=600>
 
 :heavy_check_mark: If it does, you can continue :+1:
 
@@ -261,15 +261,13 @@ glab config set -g host gitlab.switch.ch
 
 Now it's time to generate a Personal Access Token (PAT) in order to login to your account. Open the [course repository](https://gitlab.switch.ch/hslu/continuing-education/bootcamp-NLP-LLM/bootcamp_fs2025) and navigate to "Preferences" by clicking your profile in the top left corner.
 
-![GitLab Preferences](images/gitlab-preferences.png)
-
 Then click on "Access tokens" and add a new token.
 
-![GitLab Access tokens](images/gitlab-personal-access-tokens.png)
+<img src="./images/gitlab-personal-access-tokens.png" width=850>
 
 You can name the token however you want, just be sure to not set an expiration date and to select the options circled in red:
 
-![Creating a Personal Access Token](images/gitlab-create-personal-access-token.png)
+<img src="./images/gitlab-create-personal-access-token.png" width=750>
 
 Finally, click on "Create personal access token" and copy the token.
 
@@ -313,7 +311,7 @@ We'll start with a default configuration provided in the course materials.
 Go to the `dotfiles` folder and run the installer:
 
 ```bash
-cd dotfiles && bash install.sh
+cd bootcamp_fs2025/Day_0/dotfiles && bash install.sh
 ```
 
 Please now **quit** all your opened terminal windows.
@@ -457,22 +455,22 @@ exec zsh
 Let's create the virtual environment we are going to use during the whole course:
 
 ```bash
-pyenv virtualenv 3.12.0 iai_course
+pyenv virtualenv 3.12.0 bootcamp
 ```
 
 Let's now set the virtual environment with:
 
 ```bash
-pyenv global iai_course
+pyenv global bootcamp
 ```
 
 Great! Anytime we'll install Python package, we'll do it in that environment.
 
 ## Python packages
 
-Now that we have a pristine `iai_course` virtual environment, it's time to install some packages in it.
+Now that we have a pristine `bootcamp` virtual environment, it's time to install some packages in it.
 
-First, let's upgrade `pip`, the tool to install Python Packages from [pypi.org](https://pypi.org). In the latest terminal where the virtualenv `iai_course` is activated, run:
+First, let's upgrade `pip`, the tool to install Python Packages from [pypi.org](https://pypi.org). In the latest terminal where the virtualenv `bootcamp` is activated, run:
 
 ```bash
 pip install --upgrade pip
@@ -481,20 +479,7 @@ pip install --upgrade pip
 Then let's install some packages for the first weeks of the program. To do so, navigate to the cloned course material folder and run the following command:
 
 ```bash
-pip install -r requirements/linux.txt
-```
-
-## `jupyter` notebook extensions
-
-Pimp your `jupyter` notebooks with awesome extensions:
-
-```bash
-# install nbextensions
-jupyter contrib nbextension install --user
-jupyter nbextension enable toc2/main
-jupyter nbextension enable collapsible_headings/main
-jupyter nbextension enable spellchecker/main
-jupyter nbextension enable code_prettify/code_prettify
+pip install -r requirements_new/linux.txt
 ```
 
 ### Custom CSS
@@ -540,27 +525,16 @@ jupyter notebook
 
 Your web browser should open on a `jupyter` window:
 
-![jupyter.png](images/jupyter.png)
+<img src="./images/jupyter.png" width=800>
 
 Click on `New`:
 
-![jupyter_new.png](images/jupyter_new.png)
+<img src="./images/jupyter_new.png" width=800>
 
 A tab should open on a new notebook:
 
-![jupyter_notebook.png](images/jupyter_notebook.png)
+<img src="./images/jupyter_notebook.png" width=800>
 
-### `nbextensions` check up
-
-Perform a sanity check for `jupyter notebooks nbextensions`. Click on `Nbextensions`:
-
-![jupyter_nbextensions.png](images/jupyter_nbextensions.png)
-
-Untick _"disable configuration for nbextensions without explicit compatibility"_ then check that _at least_ all `nbextensions` circled in red are enabled:
-
-![nbextensions.png](images/nbextensions.png)
-
-You can close your web browser then terminate the jupyter server with `CTRL` + `C`.
 
 ### Python setup check up
 
@@ -618,5 +592,4 @@ docker run hello-world
 
 The following message should print:
 
-![](images/docker_hello.png)
-
+<img src="./images/docker_hello.png" width=600>

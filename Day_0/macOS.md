@@ -46,7 +46,7 @@ Press `Cmd` + `I` on the Terminal app, then verify that the box "Open using Rose
 
 Clicking the little red cross in the top left corner of the application window on a Mac **does not really quit it**, it just closes an active window. To quit the application _for real_ either press `Cmd + Q` when the application is active, or navigate to `APP_NAME` -> `Quit` in the menu bar.
 
-![Quit Terminal on macOS](images/macos_quit.png)
+<img src="./images/macos_quit.png" height=200>
 
 During this setup you will be asked to **quit and re-open** applications multiple times, please make sure you do it properly :pray:
 
@@ -66,7 +66,7 @@ If you receive the following message, you can just skip this step and go to next
 
 Otherwise, it will open a window asking you if you want to install some software: click on "Install" and wait.
 
-![Install xcode-select on macOS](images/macos_xcode_select_install.png)
+<img src="./images/macos_xcode_select_install.png" width=400>
 
 :heavy_check_mark: If you see the message "The software was installed" then all good :+1:
 
@@ -217,7 +217,7 @@ Launch VS Code from your terminal by typing `code` and pressing `Enter`.
 
 Click on the little arrow at the bottom of the left bar :point_down:
 
-![VS Code Live Share](images/vscode_live_share.png)
+<img src="./images/vscode_live_share.png" width=600>
 
 - Click on the "Share" button, then on "GitHub (Sign in using GitHub account)".
 - A popup appears asking you to sign in with GitHub: click on "Allow".
@@ -240,7 +240,7 @@ If asked "Do you want to change your default shell to zsh?", press `Y`
 
 At the end your terminal should look like this:
 
-![Ubuntu terminal with OhMyZsh](images/oh_my_zsh.png)
+<img src="./images/oh_my_zsh.png" width=600>
 
 :heavy_check_mark: If it does, you can continue :+1:
 
@@ -315,15 +315,13 @@ glab config set -g host gitlab.switch.ch
 
 Now it's time to generate a Personal Access Token (PAT) in order to login to your account. Open the [course repository](https://gitlab.switch.ch/hslu/continuing-education/bootcamp-NLP-LLM/bootcamp_fs2025) and navigate to "Preferences" by clicking your profile in the top left corner.
 
-![GitLab Preferences](images/gitlab-preferences.png)
-
 Then click on "Access tokens" and add a new token.
 
-![GitLab Access tokens](images/gitlab-personal-access-tokens.png)
+<img src="./images/gitlab-personal-access-tokens.png" width=850>
 
 You can name the token however you want, just be sure to not set an expiration date and to select the options circled in red:
 
-![Creating a Personal Access Token](images/gitlab-create-personal-access-token.png)
+<img src="./images/gitlab-create-personal-access-token.png" width=750>
 
 Finally, click on "Create personal access token" and copy the token.
 
@@ -367,7 +365,7 @@ We'll start with a default configuration provided in the course materials.
 Go to the `dotfiles` folder and run the installer:
 
 ```bash
-cd dotfiles && bash install.sh
+cd bootcamp_fs2025/Day_0/dotfiles && bash install.sh
 ```
 
 Please now **quit** all your opened terminal windows.
@@ -547,22 +545,22 @@ brew install pyenv-virtualenv
 Let's create the virtual environment we are going to use during the whole course:
 
 ```bash
-pyenv virtualenv 3.12.0 nlp_bootcamp
+pyenv virtualenv 3.12.0 bootcamp
 ```
 
 Let's now set the virtual environment with:
 
 ```bash
-pyenv global nlp_bootcamp
+pyenv global bootcamp
 ```
 
 Great! Anytime we'll install Python package, we'll do it in that environment.
 
 ## Python packages
 
-Now that we have a pristine `nlp_bootcamp` virtual environment, it's time to install some packages in it.
+Now that we have a pristine `bootcamp` virtual environment, it's time to install some packages in it.
 
-First, let's upgrade `pip`, the tool to install Python Packages from [pypi.org](https://pypi.org). In the latest terminal where the virtualenv `iai_course` is activated, run:
+First, let's upgrade `pip`, the tool to install Python Packages from [pypi.org](https://pypi.org). In the latest terminal where the virtualenv `bootcamp` is activated, run:
 
 ```bash
 pip install --upgrade pip
@@ -576,7 +574,7 @@ If your computer uses **Apple Silicon**, expand the paragraph below and go throu
   <summary>👉&nbsp;&nbsp;Setup for Apple Silicon 👈</summary>
 
 ```bash
-pip install -r requirements/apple_silicon.txt
+pip install -r requirements_new/apple_silicon.txt
 ```
 
 </details>
@@ -587,23 +585,11 @@ If your computer uses **Apple Intel**, expand the paragraph below and go through
   <summary>👉&nbsp;&nbsp;Setup for Apple Intel 👈</summary>
 
 ```bash
-pip install -r requirements/apple_intel.txt
+pip install -r requirements_new/apple_intel.txt
 ```
 
 </details>
 
-## `jupyter` notebook extensions
-
-Pimp your `jupyter` notebooks with awesome extensions:
-
-```bash
-# install nbextensions
-jupyter contrib nbextension install --user
-jupyter nbextension enable toc2/main
-jupyter nbextension enable collapsible_headings/main
-jupyter nbextension enable spellchecker/main
-jupyter nbextension enable code_prettify/code_prettify
-```
 
 ### Custom CSS
 
@@ -648,27 +634,15 @@ jupyter notebook
 
 Your web browser should open on a `jupyter` window:
 
-![jupyter.png](images/jupyter.png)
+<img src="./images/jupyter.png" width=800>
 
 Click on `New`:
 
-![jupyter_new.png](images/jupyter_new.png)
+<img src="./images/jupyter_new.png" width=800>
 
 A tab should open on a new notebook:
 
-![jupyter_notebook.png](images/jupyter_notebook.png)
-
-### `nbextensions` check up
-
-Perform a sanity check for `jupyter notebooks nbextensions`. Click on `Nbextensions`:
-
-![jupyter_nbextensions.png](images/jupyter_nbextensions.png)
-
-Untick _"disable configuration for nbextensions without explicit compatibility"_ then check that _at least_ all `nbextensions` circled in red are enabled:
-
-![nbextensions.png](images/nbextensions.png)
-
-You can close your web browser then terminate the jupyter server with `CTRL` + `C`.
+<img src="./images/jupyter_notebook.png" width=800>
 
 ### Python setup check up
 
@@ -702,7 +676,7 @@ _if you already have Docker installed on your machine please update with the lat
 
 Go to [Docker](https://docs.docker.com/get-docker/) website and choose your operating system:
 
-![](images/docker.png)
+<img src="./images/docker.png" width=800>
 
 Then follow the setup instructions, you are going to install a desktop application.
 
@@ -734,7 +708,7 @@ You are going to use most of the apps you've installed today really often. Let's
 
 To pin an app to your dock, launch the app, right-click on the icon in the taskbar to bring up the context menu and choose "Options" then "Keep in Dock".
 
-![How to pin an app to the taskbar in macOS](images/macos_dock.png)
+<img src="./images/macos_dock.png" height=250>
 
 You must pin:
 

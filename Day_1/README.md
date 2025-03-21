@@ -18,3 +18,9 @@ Lecture on Day 1 (Plan for sub-folders):
  - Text Generation
  - NLP_CNN
  - Optional
+
+ 5) SpaCy and NER (Named Entity Recognition)
+ - Slides (.pdf file)
+ - Data_preprocessing_SpaCY
+ - NER_Applications_SpaCY
+ 

@@ -21,6 +21,6 @@ Lecture on Day 1 (Plan for sub-folders):
 
  5) SpaCy and NER (Named Entity Recognition)
  - Slides (.pdf file)
- - Data_preprocessing_SpaCY
- - NER_Applications_SpaCY
+ - Data_preprocessing_SpaCy
+ - NER_Applications_SpaCy
  
